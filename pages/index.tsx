@@ -1,10 +1,14 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import { GetStaticProps } from "next";
+import Link from "next/link";
+
+import { getSortedPostsData } from "../lib/posts";
+
+import Layout, { siteTitle } from "../components/layout";
+import Date from "../components/date";
+import PostCard from "../components/postCard/PostCard";
+
+import utilStyles from "../styles/utils.module.css";
 
 export default function Home({
   allPostsData,
@@ -31,13 +35,7 @@ export default function Home({
         <h2 className={utilStyles.headingLg}>Blog 📰</h2>
         <ul className={utilStyles.list}>
           {allPostsData.slice(0, 4).map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+            <PostCard title={title} id={id} date={date}></PostCard>
           ))}
         </ul>
 

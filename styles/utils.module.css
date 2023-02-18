@@ -63,10 +63,6 @@
   margin: 0;
 }
 
-.listItem {
-  margin: 0 0 1.25rem;
-}
-
 .lightText {
   color: #666;
 }
@@ -86,6 +82,7 @@
   border-width: 1px;
   padding: 5px 10px;
   max-width: 100px;
+  margin-top: 0;
 }
 
 .normalButton:hover {
