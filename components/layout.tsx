@@ -4,8 +4,10 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "[Your Name]";
-export const siteTitle = "Next.js Sample Website";
+import Navbar, { NavbarProps } from "./navbar/Navbar";
+
+const name = "Felipe Pêpe";
+export const siteTitle = "Felipe Pêpe";
 
 export default function Layout({
   children,
@@ -19,8 +21,8 @@ export default function Layout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="Felipe Pêpe"
+          content="Meu site pessoal sobre desenvolvimento e tecnologia"
         />
         <meta
           property="og:image"
@@ -31,8 +33,9 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Navbar isHome={home} />
       <header className={styles.header}>
-        {home ? (
+        {home && (
           <>
             <Image
               priority
@@ -42,34 +45,11 @@ export default function Layout({
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
+            <h1 className={utilStyles.headingXl}>{name}</h1>
           </>
         )}
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
     </div>
   );
 }

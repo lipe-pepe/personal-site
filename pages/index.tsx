@@ -21,16 +21,16 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        <p style={{ textAlign: "center" }}>
+          Olá! Meu nome é Felipe e sou programador full-stack. Esse é o meu
+          site!
         </p>
       </section>
+      {/* Blog section */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Blog 📰</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.slice(0, 4).map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
@@ -40,6 +40,29 @@ export default function Home({
             </li>
           ))}
         </ul>
+
+        <div className={utilStyles.center}>
+          <Link href={"posts"}>
+            <p className={utilStyles.normalButton}>Ver tudo</p>
+          </Link>
+        </div>
+      </section>
+
+      {/* Curriculum section */}
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Currículo 📝</h2>
+        <p>
+          Sou um programador com espírito empreendedor. Atualmente estou
+          trabalhando com desenvolvimento web, mas também sou interessado em
+          mobile e em desenvolvimento de games. <br></br>
+          <br></br>
+          Quer saber mais? Você pode conferir meu <b>currículo completo </b>
+          clicando{" "}
+          <Link href={"cv"}>
+            <a>aqui</a>
+          </Link>
+          . .
+        </p>
       </section>
     </Layout>
   );

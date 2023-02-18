@@ -37,6 +37,14 @@
   text-decoration: none;
 }
 
+.paragraphSm {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: normal;
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
@@ -61,4 +69,27 @@
 
 .lightText {
   color: #666;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.normalButton {
+  font-size: 0.9rem;
+  color: #0070f3;
+  text-align: center;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: #0070f3;
+  border-width: 1px;
+  padding: 5px 10px;
+  max-width: 100px;
+}
+
+.normalButton:hover {
+  color: white;
+  background-color: #0070f3;
+  cursor: pointer;
 }
