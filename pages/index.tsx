@@ -16,6 +16,7 @@ export default function Home({
   allPostsData: {
     date: string;
     title: string;
+    subtitle: string;
     id: string;
   }[];
 }) {
@@ -33,9 +34,14 @@ export default function Home({
       {/* Blog section */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog 📰</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.slice(0, 4).map(({ id, date, title }) => (
-            <PostCard title={title} id={id} date={date}></PostCard>
+        <ul className={utilStyles.posts}>
+          {allPostsData.slice(0, 4).map(({ id, date, title, subtitle }) => (
+            <PostCard
+              title={title}
+              subtitle={subtitle}
+              id={id}
+              date={date}
+            ></PostCard>
           ))}
         </ul>
 

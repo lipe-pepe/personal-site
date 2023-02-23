@@ -14,6 +14,7 @@ export default function Posts({
   allPostsData: {
     date: string;
     title: string;
+    subtitle: string;
     id: string;
   }[];
 }) {
@@ -25,8 +26,13 @@ export default function Posts({
       <h2 className={utilStyles.headingXl}>Blog 📰</h2>
       <br />
       <ul className={utilStyles.list}>
-        {allPostsData.map(({ id, date, title }) => (
-          <PostCard title={title} id={id} date={date}></PostCard>
+        {allPostsData.map(({ id, date, title, subtitle }) => (
+          <PostCard
+            title={title}
+            subtitle={subtitle}
+            id={id}
+            date={date}
+          ></PostCard>
         ))}
       </ul>
     </Layout>
