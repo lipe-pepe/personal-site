@@ -1,9 +1,15 @@
 .container {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   padding: 1rem 1rem;
   border-radius: 6px;
   border-color: #ccc;
   border-width: 1px;
   border-style: solid;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  border-color: #0070f3;
 }

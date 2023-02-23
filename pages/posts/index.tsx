@@ -25,7 +25,7 @@ export default function Posts({
       </Head>
       <h2 className={utilStyles.headingXl}>Blog 📰</h2>
       <br />
-      <ul className={utilStyles.list}>
+      <ul className={utilStyles.posts}>
         {allPostsData.map(({ id, date, title, subtitle }) => (
           <PostCard
             title={title}
