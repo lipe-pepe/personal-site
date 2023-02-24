@@ -1,0 +1,40 @@
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+}
+
+.image {
+  border-radius: 100%;
+  margin-top: 1rem;
+  flex-basis: 50%;
+  position: relative;
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+  color: #a2a5bf;
+  max-width: 40px;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style-position: outside;
+}
+
+@media (min-width: 640px) {
+  .image {
+    border-radius: 100%;
+    margin-top: 1rem;
+    flex-basis: 50%;
+    position: relative;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
