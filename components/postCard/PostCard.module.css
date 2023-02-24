@@ -2,7 +2,7 @@
   margin: 0.5rem 0;
   padding: 1rem 1rem;
   border-radius: 6px;
-  border-color: #ccc;
+  border-color: #a2a5bf;
   border-width: 1px;
   border-style: solid;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
@@ -12,11 +12,12 @@
 
 .container:hover {
   transform: scale(1.05);
-  border-color: #0070f3;
+  border-color: #153dcf;
 }
 
 .title {
-  color: #0070f3;
+  color: #040c4c;
+  font-weight: 500;
   padding: 0;
   margin: 0.5rem 0;
 }
