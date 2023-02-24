@@ -4,11 +4,11 @@ subtitle: "Explicando a autenticação SAML"
 date: "2023-01-23"
 ---
 
-Uma vez que já falei sobre [autenticação](/posts/autenticacao-de-usuario) em geral e sobre [SSO](/posts/single-sign-on), podemos falar sobre **SAML**. SAML é a sigla para Security Assertion Markup Language (linguagem de marcação de asserção de segurança). Sim, é mais uma sigla estranha, com um nome que também não é muito intuitivo, mas não é difícil de entender.
+Uma vez que já falei sobre [autenticação](/posts/autenticacao-de-usuario) em geral e sobre SSO, podemos falar sobre **SAML**. SAML é a sigla para Security Assertion Markup Language (linguagem de marcação de asserção de segurança). Sim, é mais uma sigla estranha, com um nome que também não é muito intuitivo, mas não é difícil de entender.
 
 # O que é o SAML?
 
-O SAML é uma tecnologia usada para fazer autenticação com _logon único_. Isso significa que, usando SAML, o usuário pode fazer login uma única vez e possa acessar vários sites ou aplicativos diferentes. Em outras palavras, o SAML possiblita o SSO. Pelo SAML, um provedor de identidade centraliza a autenticação, que é realizada só uma vez, e permite que o usuário acesse vários provedores de serviço com essa única autenticação.
+O SAML é uma tecnologia usada para fazer autenticação com _logon único_. Isso significa que, usando SAML, o usuário pode fazer login uma única vez e acessar vários sites ou aplicativos diferentes. Em outras palavras, o SAML possiblita o SSO. Pelo SAML, um provedor de identidade centraliza a autenticação, que é realizada só uma vez, e permite que o usuário acesse vários provedores de serviço com essa única autenticação.
 
 Um exemplo cotidiano que pode explicar o SAML é sua carteira de identidade 👤. Quando você vai entrar em algum lugar e mostra a carteira de identidade, o fiscal somente verifica a sua carteira e permite sua passagem. Não há a necessidade de fazer testes de DNA, verificar sua certidão de nascimento, perguntar a outra pessoa se você é você... Após expedida sua identidade, você usa ela para entrar em todos os lugares - cinema, aeroporto, teatros, etc. Nesse exemplo, os estabelecimentos são os provedores de serviços, lugares que você quer acessar. A sua identidade são as credenciais autenticadas pelo SAML. O órgão expedidor da sua identidade, por exemplo o Detran, é o provedor de identidade que te autenticou. O Detran não precisa verificar sempre sua identidade, pois como todos os provedores utilizam o mesmo padrão (a carteira de identidade nacional), todos confiam na oficialidade da sua carteira. Mais fácil de entender assim, né?
 
@@ -31,10 +31,6 @@ Uma asserção SAML é um documento XML (Extensible Markup Language) que contém
 - **Asserção de atribuição**: passam atributos SAML, algumas informações sobre o usuário, para o provedor de serviços.
 
 - **Asserção de decisão de autorização**: fala ao provedor de serviços se o usuário está autorizado a acessar o serviço ou não, e nesse caso, porquê não.
-
-### Autenticação X Autorização
-
-Autenticação e autorização são dois termos que podem se confundir. A diferença entre elas é que autenticação são os processos de verificação da identidade do usuário, enquanto autorização é o que define o que ele poderá ver e fazer na plataforma uma vez que já estiver autenticado. Por exemplo, se você está no Instagram e postou uma foto, somente você deve ser capaz de apagar aquela foto. Isso éautorização. As duas ferramentas juntas são importantíssimas para a segurança da sua aplicação.
 
 # Como funciona o SAML?
 
