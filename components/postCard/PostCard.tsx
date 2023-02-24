@@ -14,22 +14,23 @@ export interface PostCardProps {
 
 const PostCard: React.FC<PostCardProps> = ({ title, subtitle, id, date }) => {
   return (
-    <div className={styles.container}>
-      <li key={id}>
-        <Link href={`/posts/${id}`}>{title}</Link>
-        <br />
-        {subtitle != null && (
-          <>
-            <small className={utilStyles.lightText}>{subtitle}</small>
-            <br />
-          </>
-        )}
-        <br />
-        <small className={utilStyles.lightText}>
-          <Date dateString={date} />
-        </small>
-      </li>
-    </div>
+    <Link href={`/posts/${id}`}>
+      <div className={styles.container}>
+        <li key={id}>
+          <p className={styles.title}>{title}</p>
+          {subtitle != null && (
+            <>
+              <small className={utilStyles.lightText}>{subtitle}</small>
+              <br />
+            </>
+          )}
+          <br />
+          <small className={utilStyles.lightText}>
+            <Date dateString={date} />
+          </small>
+        </li>
+      </div>
+    </Link>
   );
 };
 
