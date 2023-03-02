@@ -1,9 +1,15 @@
-import Layout from "../../components/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
-import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
+import Link from "next/link";
+
+import { getAllPostIds, getPostData } from "../../lib/posts";
+
+import { HiArrowSmLeft } from "react-icons/hi";
+
+import Layout from "../../components/layout";
+import Date from "../../components/date";
+
+import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({
   postData,
@@ -29,6 +35,12 @@ export default function Post({
         <br />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <Link href={"/posts"}>
+        <div className={utilStyles.back}>
+          <HiArrowSmLeft />
+          <p className={utilStyles.link}>Voltar para o blog</p>
+        </div>
+      </Link>
     </Layout>
   );
 }

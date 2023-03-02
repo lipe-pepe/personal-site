@@ -97,12 +97,27 @@
   padding: 5px 10px;
   max-width: 100px;
   margin-top: 1rem;
+  white-space: nowrap;
 }
 
 .normalButton:hover {
   color: white;
   background-color: #153dcf;
   cursor: pointer;
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  color: #153dcf;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 640px) {

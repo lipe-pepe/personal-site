@@ -1,0 +1,21 @@
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #a2a5bf;
+}
+
+.separator {
+  margin-bottom: 1rem;
+  height: 1px;
+  width: 100%;
+  background-color: #a2a5bf;
+}
+
+.list {
+  margin: 12px 0;
+}

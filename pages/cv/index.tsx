@@ -1,9 +1,13 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout, { siteTitle } from "../../components/layout";
+
+import { HiArrowSmLeft } from "react-icons/hi";
 
 import Timeline from "../../components/timeline/Timeline";
 
 import utilStyles from "../../styles/utils.module.css";
+import styles from "./Curriculum.module.css";
 
 const experience = [
   {
@@ -92,6 +96,34 @@ export default function Curriculum() {
       <Timeline title="Formação Acadêmica 🎓" items={academic}></Timeline>
 
       <Timeline title="Destaques" items={prizes}></Timeline>
+
+      <h3 className={styles.title}>Competências</h3>
+      <div className={styles.separator} />
+      <ul>
+        <li className={styles.list}>
+          <b>Linguagens de programação:</b> JavaScript, Ruby, HTML, CSS, Python,
+          C, C#, C++, Java{" "}
+        </li>
+        <li className={styles.list}>
+          <b>Frameworks:</b> ReactJS, NextJS, Ruby on Rails
+        </li>
+        <li className={styles.list}>
+          <b>Bancos de Dados:</b> SQL (PostgreSQL, MySQL)
+        </li>
+        <li className={styles.list}>
+          <b>Utilidades:</b> Git, GitHub
+        </li>
+        <li className={styles.list}>
+          <b>Outros:</b> Unity
+        </li>
+      </ul>
+      <br />
+      <Link href={"/"}>
+        <div className={utilStyles.back}>
+          <HiArrowSmLeft />
+          <p className={utilStyles.link}>Voltar para página Inicial</p>
+        </div>
+      </Link>
     </Layout>
   );
 }

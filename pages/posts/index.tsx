@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
+import Link from "next/link";
 
 import { getSortedPostsData } from "../../lib/posts";
 
@@ -7,6 +8,8 @@ import Layout, { siteTitle } from "../../components/layout";
 import PostCard from "../../components/postCard/PostCard";
 
 import utilStyles from "../../styles/utils.module.css";
+
+import { HiArrowSmLeft } from "react-icons/hi";
 
 export default function Posts({
   allPostsData,
@@ -35,6 +38,12 @@ export default function Posts({
           ></PostCard>
         ))}
       </ul>
+      <Link href={"/"}>
+        <div className={utilStyles.back}>
+          <HiArrowSmLeft />
+          <p className={utilStyles.link}>Voltar para página Inicial</p>
+        </div>
+      </Link>
     </Layout>
   );
 }
