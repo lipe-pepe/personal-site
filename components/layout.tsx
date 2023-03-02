@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 
 import Navbar from "./navbar/Navbar";
+import Footer from "./footer/Footer";
 
 const name = "Felipe Pêpe";
 export const siteTitle = "Felipe Pêpe";
@@ -49,6 +50,7 @@ export default function Layout({
         )}
       </header>
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }
