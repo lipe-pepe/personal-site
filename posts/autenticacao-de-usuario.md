@@ -1,6 +1,6 @@
 ---
 title: "Autenticação de Usuários"
-subtitle: "Tudo sobre autenticação"
+subtitle: "Um pouco sobre autenticação"
 date: "2023-01-18"
 ---
 
@@ -36,17 +36,14 @@ Por outro lado, é a autenticação menos segura, pois hackers podem adivinhar a
 
 A biometria é todo tipo de autenticação que envolve as características físicas do usuário, como a impressão digital, o reconhecimento facial, etc. É o padrão que vemos hoje em alguns smartphones, por exemplo. Ela é segura por um lado, pois as características físicas como digital e rosto são únicas para cada um. Por outro, também é possível burlar a autenticação de biometria. Um exemplo é se o criminoso usar imagens de alta resolução do seu rosto... O sistema vai permitir a entrada do usuário.
 
-<!-- ### Email
-
-(ESCREVER SOBRE O EMAIL) -->
-
 ### SSO, Sessões, Autenticação de dois fatores...
 
-Existem formas de autenticação das quais podemos falar mais tecnicamente e ser mais específicos. Já que são assuntos grandes dentro de um assunto maior, eu separei elas em posts separados. Vale a pena acessar os links e ler sobre as que você tiver interesse. São elas:
+Existem formas de autenticação das quais podemos falar mais tecnicamente e ser mais específicos. Os tópicos eu ainda não abordei e os links para cada um estarão disponíveis conforme os posts estiverem na página. São elas:
 
-- [SSO - Single Sign On](/posts/single-sign-on)
-
-<!-- - [Autenticação de Dois Fatores (2FA)](/posts/autenticacao-2fa)
-- Social Login (ver sobre)
+- SSO - Single Sign On
+- Autenticação de Dois Fatores (2FA)
+- Social Login
 - Session Based
-- Token Based -->
+- Token Based
+
+Por enquanto, é isso sobre esse assunto! Conforme eu for aprendendo mais e vendo mais coisas sobre ele, eu vou editando esse post! Mas eu já abordei num post único o [SAML (Security Assertion Markup Language)](/posts/saml), uma tecnologia usada pra autenticação. Já dá pra começar a ver mais! 😉
