@@ -28,6 +28,10 @@ export default function Posts({
       </Head>
       <h2 className={utilStyles.headingXl}>Blog 📰</h2>
       <br />
+      <p>
+        Aqui você pode ler sobre diversos temas relacionados a tecnologia e
+        desenvolvimento, abordados de uma forma super simples e descomplicada!
+      </p>
       <ul className={utilStyles.posts}>
         {allPostsData.map(({ id, date, title, subtitle }) => (
           <PostCard
