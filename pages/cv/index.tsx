@@ -181,7 +181,7 @@ export default function Curriculum() {
           <b>Outros:</b> Unity
         </li>
       </ul>
-
+      <br />
       <Timeline title="Interesses" items={interests}></Timeline>
 
       <br />

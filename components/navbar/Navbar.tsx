@@ -34,11 +34,19 @@ const Navbar: React.FC = () => {
         >
           <HiMenu className={styles.hamburgerIcon} />
         </button>
+        <div className={styles.menu}>
+          <Link href="/posts">
+            <p className={styles.menuButton}>Blog</p>
+          </Link>
+          <Link href="/cv">
+            <p className={styles.menuButton}>Currículo</p>
+          </Link>
+        </div>
       </div>
 
       {/* Menu mobile */}
       {hamburgerMenuActive && (
-        <div className={styles.menu}>
+        <div className={styles.menuMobile}>
           <Link href="/posts">
             <p className={styles.menuButton}>Blog</p>
           </Link>
