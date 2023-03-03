@@ -1,9 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout, { siteTitle } from "../../components/layout";
+import Image from "next/image";
 
 import { HiArrowSmLeft } from "react-icons/hi";
+import { MdPlace } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
 
+import Layout, { siteTitle } from "../../components/layout";
 import Timeline from "../../components/timeline/Timeline";
 
 import utilStyles from "../../styles/utils.module.css";
@@ -45,11 +50,13 @@ const experience = [
 
 const academic = [
   {
+    image: "poli.jpg",
     title: "UFRJ - Universidade Federal do Rio de Janeiro",
     subtitle: "Bacharelado em Engenharia Eletrônica e de Computação",
     date: "2018-2024 (previsão)",
   },
   {
+    image: "anglo.jpg",
     title: "Colégio Anglo-Americano",
     subtitle: "Ensino Médio",
     date: "2015-2017",
@@ -75,14 +82,70 @@ const prizes = [
   },
 ];
 
+const interests = [
+  {
+    title: "👾 Game Dev",
+    items: [
+      "Desenvolvo games por hobby",
+      "Já participei de diversas game jams (competições de games) e inclusive ganhei uma, a CSJam 7",
+      "Você pode ver alguns desses projetos em https://felipe-pepe.itch.io/",
+    ],
+  },
+  {
+    title: "🎭 Teatro",
+    items: [
+      "Fora do mundo da tecnologia, sou ator de teatro",
+      "Já participei de 3 peças e protagonizei duas delas",
+    ],
+  },
+];
+
 export default function Curriculum() {
   return (
     <Layout>
       <Head>
         <title>{siteTitle} - Currículo</title>
       </Head>
-      <h2 className={utilStyles.headingXl}>Currículo 📝</h2>
       <br />
+      <div className={styles.profile}>
+        <div className={styles.image}>
+          <Image
+            priority
+            src="/images/profile.jpg"
+            className={utilStyles.borderCircle}
+            height={144}
+            width={144}
+            alt={"Foto de perfil"}
+          />
+        </div>
+        <div className={styles.name}>
+          {" "}
+          <h1 style={{ marginBottom: "0" }} className={utilStyles.heading2Xl}>
+            Felipe Pêpe da Silva Oliveira
+          </h1>
+          <p className={styles.subtitle}>Desenvolvedor Fullstack</p>
+          <div className={styles.info}>
+            <div className={styles.place}>
+              <MdPlace /> Rio de Janeiro, RJ
+            </div>
+            <div className={styles.icons}>
+              <a
+                href="https://www.linkedin.com/in/felipe-pepe/"
+                target="_blank"
+              >
+                <BsLinkedin className={styles.icon} />
+              </a>
+              <a href="https://github.com/lipe-pepe" target="_blank">
+                <BsGithub className={styles.icon} />
+              </a>
+              <a href="mailto:felipepepe21@gmail.com" target="_blank">
+                <MdOutlineEmail className={styles.icon} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p>
         Sou um programador com espírito empreendedor, em busca de um desafio
         profissional para o crescimento na área de tecnologia, desenvolvimento
@@ -90,6 +153,7 @@ export default function Curriculum() {
         web, mas também sou interessado em mobile e em desenvolvimento de games.
         Criatividade, liderança e dedicação são o que me definem.
       </p>
+
       <br />
       <Timeline title="Experiência Profissional" items={experience}></Timeline>
 
@@ -117,6 +181,9 @@ export default function Curriculum() {
           <b>Outros:</b> Unity
         </li>
       </ul>
+
+      <Timeline title="Interesses" items={interests}></Timeline>
+
       <br />
       <Link href={"/"}>
         <div className={utilStyles.back}>

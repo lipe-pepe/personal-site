@@ -6,8 +6,8 @@ import utilStyles from "../../styles/utils.module.css";
 export interface TimelineItemProps {
   image?: string;
   title: string;
-  subtitle: string;
-  date: string;
+  subtitle?: string;
+  date?: string;
   items?: string[];
 }
 
@@ -33,9 +33,13 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       )}
       <div>
         <h1 className={utilStyles.headingMd}>{title}</h1>
-        <small className={utilStyles.paragraphSm}>{subtitle}</small>
-        <br />
-        <small className={utilStyles.lightText}>{date}</small>
+        {subtitle && (
+          <>
+            <small className={utilStyles.paragraphSm}>{subtitle}</small>
+            <br />
+          </>
+        )}
+        {date && <small className={utilStyles.lightText}>{date}</small>}
         {items && (
           <ul className={styles.list}>
             {items.map((item) => (
