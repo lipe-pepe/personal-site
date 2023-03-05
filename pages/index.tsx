@@ -4,6 +4,10 @@ import Link from "next/link";
 
 import { getSortedPostsData } from "../lib/posts";
 
+import { BsGithub } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
+
 import Layout, { siteTitle } from "../components/layout";
 import Date from "../components/date";
 import PostCard from "../components/postCard/PostCard";
@@ -67,6 +71,33 @@ export default function Home({
           </Link>
           . .
         </p>
+        <br />
+      </section>
+
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Contato 📧</h2>
+        <div className={utilStyles.flexCol}>
+          <a href="mailto:felipepepe21@gmail.com" target="_blank">
+            <div className={utilStyles.flexRow}>
+              <MdOutlineEmail className={utilStyles.icon} />
+              <p className={utilStyles.paragraphLg}>felipepepe21@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/felipe-pepe/" target="_blank">
+            <div className={utilStyles.flexRow}>
+              <BsLinkedin className={utilStyles.icon} />
+              <p className={utilStyles.paragraphLg}>
+                linkedin.com/in/felipe-pepe/
+              </p>
+            </div>
+          </a>
+          <a href="https://github.com/lipe-pepe" target="_blank">
+            <div className={utilStyles.flexRow}>
+              <BsGithub className={utilStyles.icon} />
+              <p className={utilStyles.paragraphLg}>github.com/lipe-pepe</p>
+            </div>
+          </a>
+        </div>
       </section>
     </Layout>
   );

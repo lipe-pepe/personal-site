@@ -41,6 +41,9 @@ const Navbar: React.FC = () => {
           <Link href="/cv">
             <p className={styles.menuButton}>Currículo</p>
           </Link>
+          <Link href="/contact">
+            <p className={styles.menuButton}>Contato</p>
+          </Link>
         </div>
       </div>
 
@@ -52,6 +55,9 @@ const Navbar: React.FC = () => {
           </Link>
           <Link href="/cv">
             <p className={styles.menuButton}>Currículo</p>
+          </Link>
+          <Link href="/contact">
+            <p className={styles.menuButton}>Contato</p>
           </Link>
         </div>
       )}

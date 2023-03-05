@@ -157,7 +157,7 @@ export default function Curriculum() {
       <br />
       <Timeline title="Experiência Profissional" items={experience}></Timeline>
 
-      <Timeline title="Formação Acadêmica 🎓" items={academic}></Timeline>
+      <Timeline title="Formação Acadêmica" items={academic}></Timeline>
 
       <Timeline title="Destaques" items={prizes}></Timeline>
 
@@ -165,8 +165,8 @@ export default function Curriculum() {
       <div className={styles.separator} />
       <ul>
         <li className={styles.list}>
-          <b>Linguagens de programação:</b> JavaScript, Ruby, HTML, CSS, Python,
-          C, C#, C++, Java{" "}
+          <b>Linguagens de programação:</b> JavaScript, TypeScript, Ruby, HTML,
+          CSS, Python, C, C#, C++, Java{" "}
         </li>
         <li className={styles.list}>
           <b>Frameworks:</b> ReactJS, NextJS, Ruby on Rails

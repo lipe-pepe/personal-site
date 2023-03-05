@@ -27,6 +27,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             src={`/images/${image}`}
             className={utilStyles.borderCircle}
             layout="fill"
+            objectFit="cover"
             alt={image}
           />
         </div>
